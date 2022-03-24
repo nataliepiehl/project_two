@@ -18,12 +18,31 @@ state_name TEXT
 
 CREATE TABLE Police (
 id INT PRIMARY KEY,
+county TEXT,
 total_law_enforcement_employees INT,
 total_officers INT,
 total_civilians INT,
 state_name TEXT
 );
 
+CREATE TABLE Voting (
+id INT PRIMARY KEY,
+state_name TEXT,
+state_abbreviation TEXT,
+county TEXT,
+fips INT,
+party TEXT,
+candidate TEXT,
+votes INT,
+fraction_votes FLOAT
+);
+
+CREATE TABLE County_Dict (
+id INT PRIMARY KEY,
+column_name TEXT,
+long_description TEXT,
+short_description TEXT
+);
 
 -- -- Joins tables
 -- SELECT customer_name.id, customer_name.first_name, customer_name.last_name, customer_location.address, customer_location.us_state
