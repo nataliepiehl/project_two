@@ -1,7 +1,7 @@
 -- Create tables for raw data to be loaded into
 CREATE TABLE County (
 id INT PRIMARY KEY,
-fips INT,
+fips TEXT,
 county TEXT,
 state_abbreviation TEXT,
 pop_2014 INT,
@@ -30,7 +30,7 @@ id INT PRIMARY KEY,
 state_name TEXT,
 state_abbreviation TEXT,
 county TEXT,
-fips INT,
+fips TEXT,
 party TEXT,
 candidate TEXT,
 votes INT,
@@ -49,3 +49,15 @@ short_description TEXT
 -- FROM customer_name
 -- JOIN customer_location
 -- ON customer_name.id = customer_location.id;
+
+
+select Voting.state_name,
+Voting.county,
+County.pop_2014,
+County.pct_hs_grad,
+County.pct_post_bach_grad
+from Voting
+left join County
+on (Voting.state_name = County.state_name)
+and (Voting.county = County.county)
+where Voting.state_name = 'Illinois';
