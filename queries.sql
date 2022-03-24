@@ -4,9 +4,9 @@ id INT PRIMARY KEY,
 fips INT,
 county TEXT,
 state_abbreviation TEXT,
-2014_pop INT,
+pop_2014 INT,
 pct_pop_delt10to14 FLOAT,
-2010_pop INT,
+pop_2010 INT,
 pct_hs_grad FLOAT,
 pct_post_bach_grad FLOAT,
 per_capita_income INT,
@@ -18,9 +18,9 @@ state_name TEXT
 
 CREATE TABLE Police (
 id INT PRIMARY KEY,
-Total_Law_Enforcement_Employees INT,
-Total_Officers INT,
-Total_Civilians INT,
+total_law_enforcement_employees INT,
+total_officers INT,
+total_civilians INT,
 state_name TEXT
 );
 
