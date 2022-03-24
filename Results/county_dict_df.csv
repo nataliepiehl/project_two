@@ -1,6 +1,6 @@
-,column_name,description,short_description
-0,PST045214,"Population, 2014 estimate",2014_pop
-2,PST120214,"Population, percent change - April 1, 2010 to July 1, 2014",pct_pop_delt10to14
-3,POP010210,"Population, 2010",2010_pop
-19,EDU635213,"High school graduate or higher, percent of persons age 25+, 2009-2013",pct_hs_grad
-20,EDU685213,"Bachelor's degree or higher, percent of persons age 25+, 2009-2013",pct_post_bach_grad
+id,column_name,long_description,short_description
+0,PST045214,"Population, 2014 estimate",pop_2014
+1,PST120214,"Population, percent change - April 1, 2010 to July 1, 2014",pct_pop_delt10to14
+2,POP010210,"Population, 2010",pop_2010
+3,EDU635213,"High school graduate or higher, percent of persons age 25+, 2009-2013",pct_hs_grad
+4,EDU685213,"Bachelor's degree or higher, percent of persons age 25+, 2009-2013",pct_post_bach_grad
