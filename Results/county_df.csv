@@ -1,4 +1,4 @@
-,fips,county,state_abbreviation,2014_pop,pct_pop_delt10to14,2010_pop,pct_post_hs_grad,pct_post_bach_grad,per_capita_income,median_household_income,sq_miles,pop_per_sq_mile
+,fips,county,state_abbreviation,2014_pop,pct_pop_delt10to14,2010_pop,pct_hs_grad,pct_post_bach_grad,per_capita_income,median_household_income,sq_miles,pop_per_sq_mile
 2,1001,Autauga,AL,55395,1.5,54571,85.6,20.9,24571,53682,594.44,91.8
 3,1003,Baldwin,AL,200111,9.8,182265,89.1,27.7,26766,50221,1589.78,114.6
 4,1005,Barbour,AL,26887,-2.1,27457,73.7,13.4,16829,32911,884.88,31.0
