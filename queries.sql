@@ -44,15 +44,14 @@ long_description TEXT,
 short_description TEXT
 );
 
--- -- Joins tables
--- SELECT customer_name.id, customer_name.first_name, customer_name.last_name, customer_location.address, customer_location.us_state
--- FROM customer_name
--- JOIN customer_location
--- ON customer_name.id = customer_location.id;
 
 
+-- Join One
 select Voting.state_name,
 Voting.county,
+Voting.party,
+Voting.candidate,
+Voting.votes,
 County.pop_2014,
 County.pct_hs_grad,
 County.pct_post_bach_grad
@@ -61,3 +60,43 @@ left join County
 on (Voting.state_name = County.state_name)
 and (Voting.county = County.county)
 where Voting.state_name = 'Illinois';
+
+
+-- Join 2
+select Police.county,
+Police.total_law_enforcement_employees,
+Police.total_officers,
+Police.total_civilians,
+Police.state_name,
+Voting.party,
+Voting.candidate,
+Voting.votes
+from Voting
+left join Police
+on (Voting.state_name = Police.state_name)
+and (Voting.county = Police.county)
+where Voting.state_name = 'Illinois';
+
+
+-- Join 3
+select County.county,
+County.per_capita_income,
+County.median_household_income,
+County.sq_miles,
+County.pop_per_sq_mile,
+Police.total_law_enforcement_employees,
+Police.total_officers,
+Police.total_civilians,
+Police.state_name,
+Voting.party,
+Voting.candidate,
+Voting.votes
+from Voting
+left join Police
+on (Voting.state_name = Police.state_name)
+and (Voting.county = Police.county)
+left join County
+on (Voting.state_name = County.state_name)
+and (Voting.county = County.county)
+where Police.state_name = 'Illinois';
+
